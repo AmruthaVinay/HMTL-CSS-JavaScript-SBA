@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Login Page</title>
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+       
+    </head>
+    <body onload="loadUsers()">
+        <!-- Section-->
+        <section class="py-5 figure-img" style="background-image: url('./images/banner\ wide_big.png')">
+            <div class="container px-4 px-lg-5">
+                <div class="row align-items-center g-lg-5 py-5">
+                    <div class="col-lg-7 text-center text-lg-start">
+                      <h1 class="display-4 fw-bold lh-1 mb-5">Plant World Nursery</h1>
+                      <p class="col-lg-10 fs-4">Many people enjoy living and having beautiful plants around. But is there more to it? Here are six benefits science says indoor plants may provide.</p>
+                      <li class="col-lg-10 fs-4">Improves your mood and helps lowering stress and anxiety</li>
+                      <li class="col-lg-10 fs-4">Plants improve the quality of indoor air</li>
+                      <li class="col-lg-10 fs-4">Working with plants has proven to be therapeutic</li>
+                      <li class="col-lg-10 fs-4">Plants may help you recover from illness faster, it boosts healing and pain tolerance</li>
+                      <li class="col-lg-10 fs-4">Plants may sharpen your attention by improving performance and focus</li>
+                      <li class="col-lg-10 fs-4">Easing dry skin and respiratory ailments due to dry air</li>
+                      <p class="col-lg-10 fs-4 py-3"> Now If you do decide to purchase houseplants to freshen the air naturally, please checkout our website for more options.</p>
+                    </div>
+                    <div class="col-md-10 mx-auto col-lg-5">
+                      <form action="index.html" id="loginForm" class="p-4 p-md-5 border rounded-3 bg-light">
+                        <div class="form-floating mb-3 align-content-center">
+                        <img class="rounded-circle mx-auto" src="./images/Plantworld_logo.png" width="180" alt="Card image cap">
+                        </div>
+                        <div id="authenticationError" class="text-danger">
+
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$" required>
+                          <label for="email">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="password" class="form-control" name="userPassword" id="userPassword" placeholder="Password" required>
+                          <label for="floatingPassword">Password</label>
+                        </div>
+                        <button class="btn btn-outline-dark mt-auto" type="submit">Sign In</button>
+                        <hr class="my-4">
+                        <p class="m-2 text-justify text-black">Not a memeber? <a href="contactUs.html">SignUp</a></p>
+                        <hr class="my-4">
+                        <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                      </form>
+                    </div>
+                  </div>
+           <!--      <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="card img text-center bg-image py-2" style="background-image: url('./images/final\ banner.png'); width: 18rem;" >
+                        <img class="card-img-top text-center rounded-circle" src="./images/Plant World.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <form action="index.html" id="loginForm">
+                                    <div class="text-black">
+                                        <input type="text" name="email" placeholder="Email" id="email"
+                                            title="please start with letter and follow name@mail.com" pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$" required/>
+                                    </div>
+                                        <br>
+                                    <div>
+                                        <input type="password" name="userPassword" id="userPassword" placeholder="Password" required/>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"> 
+                                <input type="submit" class="btn btn-outline-dark mt-auto" value="Sign In"/>
+                            </div>
+                        </form>
+                        </div>
+                    <div>
+                        <p class="m-2 text-justify text-black"><a href="contactUs.html">New? Please Register</a></p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-light">
+            <div class="container">
+                    <div class="row">
+                        <p class="text-center text-black">Copyright &copy; PlantWorld</p>
+                    </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

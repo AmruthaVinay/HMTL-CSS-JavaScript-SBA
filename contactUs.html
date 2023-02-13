@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Contact Us</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script>
+            var forms = document.getElementsByClassName('needs-validation');
+
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+               var formDiv = document.getElementById('formInfo');
+
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === true) {
+                       const formData = new FormData(document.getElementById('registerForm'));
+                        for (const entry of formData) {
+                            console.log(`${entry[0]}: ${entry[1]}`);
+                            console.log(formData.keys.name);
+                            var formp = document.createElement('p');
+                            formp.innerText = `${entry[0]}: ${entry[1]}`;
+                            formDiv.appendChild(formp);
+                        }
+
+                    }
+                    else if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    console.log("in other method");
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+
+/*             (function() {
+               
+                var forms = document.getElementsByClassName('needs-validation');
+                let fields = document.querySelectorAll('form > input');
+                $('form :input:not(:hidden)').keyup(function() {
+
+                var empty = false;
+                $('form:input:not(:hidden)').each(function() {
+                if ($(this).val() == '') {
+                    empty = true;
+                }
+                });
+
+                if (empty) {
+                $('#submit-btn').attr('disabled', 'disabled'); 
+                } else {
+                $('#submit-btn').removeAttr('disabled'); 
+                }
+            });
+        })();
+ */
+            </script>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                 <img src="./images/Plantworld_logo.png" width="100" height="100" class="d-inline-block align-top rounded-circle" alt="Logo">    
+                <a class="navbar-brand text-dark" href="about.html"><b>PLantWorld</b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="housePlants.html">House Plants</a></li>
+                                <li><a class="dropdown-item" href="outdoorPlants.html">Outdoor Plants</a></li>
+                                <li><a class="dropdown-item" href="herbs.html">Herbs</a></li>
+                                <li><a class="dropdown-item" href="supplies.html">Pots and Tools</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" action="checkout.html">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
+                    </form>
+                  </div>
+                  <h5 class="m-2 justify-content-end" id="userNameDisplay"> </h5>
+              </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="bg-image py-5" style="background-image: url('./images/final\ banner.png');">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder text-dark">Happy To Meet You!!!</h1>
+                </div> 
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="card text-center" >
+                        <div class="card-header">
+                            <h1><p class="text-center text-black">Please Register</p></h1>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center">
+                            <form action="" onsubmit="return false" class="needs-validation" id="registerForm" novalidate>
+                                <div class="form-row">
+                                  <div class="col-md-4 mb-3">
+                                    <label for="validationCustom01">First name</label>
+                                    <input type="text" name="First name" pattern="^[a-zA-Z]+" class="form-control" id="validationCustom01" placeholder="First name" required>
+                                    <div class="invalid-feedback">
+                                        Enter a valid First Name.
+                                        Name should be atleast 2 letters and should have no digits.
+                                      </div>
+                                    <div class="valid-feedback">
+                                      Looks good!
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label for="validationCustom02">Last name</label>
+                                    <input type="text" name="Last name" pattern="^[a-zA-Z]+" class="form-control" id="validationCustom02" placeholder="Last name" required>
+                                    <div class="valid-feedback">
+                                      Looks good!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Enter a valid Last Name.
+                                        Name should be atleast 2 letters and should have no digits.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label for="validationCustom03">Email</label>
+                                    <div class="input-group">
+                                      <input type="text" name="Email" class="form-control" id="validationCustom03" placeholder="name@mail.com" aria-describedby="inputGroupPrepend" pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$" required>
+                                      <div class="invalid-feedback">
+                                        Follow naming convention name@mail.com.
+                                      </div>
+                                    </div>
+                                  </div>
+                               
+                                      <div class="col-md-4 mb-3">
+                                        <label for="validationCustom04">Password</label>
+                                        <input type="password" name="Password" class="form-control" id="validationCustom04" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])([a-zA-Z0-9@$!%*?&]{8,})$" placeholder="password" required>
+                                        <div class="valid-feedback">
+                                        Looks good!
+                                        </div>
+                                        <div class="invalid-feedback">
+                                          Please provide a valid password. 
+                                          Password must have atleast 1 digit, 1 lowercase letter, 1 uppercase letter, 1 special character, no space, and it must be 8-16 characters long.
+                                        </div>
+                                      </div>  
+                                  <div class="col-md-4 mb-3">
+                                    <label for="validationCustom05">City</label>
+                                    <select name="City" class="form-control" id="validationCustom05" placeholder="City" required>
+                                        <option value="">Select City</option>
+                                        <option value="Naperville">Naperville</option>
+                                        <option value="chicago">Chicago</option>
+                                        <option value="Detroit">Detroit</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                      Please provide a valid city.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label for="validationCustom06">State</label>
+                                    <select name="State" class="form-control" id="validationCustom06" placeholder="State" required>
+                                        <option value="">Select State</option>
+                                        <option value="IL">ILLINIOS</option>
+                                        <option value="MI">MICHIGAN</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                      Please provide a valid state.
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label for="validationCustom07">Zip</label>
+                                    <input type="text" name="Zip" class="form-control" id="validationCustom07" pattern="\d{5}" placeholder="Zip" required>
+                                    <div class="invalid-feedback">
+                                      Please provide a valid zip only 5 digits allowed
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label for="validationCustom08">Date</label>
+                                    <input type="date" name="Date" class="form-control" id="validationCustom08" min="1910-01-01" max="2024-12-31" placeholder="Date of Birth" required>
+                                    <div class="invalid-feedback">
+                                      Please provide a valid Date.
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn btn-outline-dark mt-auto" type="submit" id="submit-btn">Submit form</button>
+                                <div class="px-5 py-5 text-start" id="formInfo">
+
+                                </div>
+                              </form>
+                              </div>
+                            
+                        </div>
+                      
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-3 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./images/Plantworld_logo.png" width="150" height="150" class="d-inline-block align-top rounded-circle" alt="">
+                    </div>
+                    <div class="col-3">
+                        <h3><p class="m-4 text-center text-white">Naperville Location</p></h3>
+                        <p class="m-0 text-center text-white">#1234 Plant Street</p>
+                        <p class="m-0 text-center text-white">IL, 60500</p>
+                        <p class="m-0 text-center text-white">Phone: (000) 020-0000</p>
+                        <p class="m-0 text-center text-white"><a href="#">Get Directions</a></p>
+                    </div>
+                    <div class="col-3">
+                        <h3><p class="m-4 text-center text-white">Michigan Location</p></h3>
+                        <p class="m-0 text-center text-white">#1234 Plant Street</p>
+                        <p class="m-0 text-center text-white">MI, 20563</p>
+                        <p class="m-0 text-center text-white">Phone: (000) 030-0000</p>
+                        <p class="m-0 text-center text-white"><a href="#">Get Directions</a></p>
+                    </div>
+                    <div class="col-3">
+                        <h3><p class="m-4 text-center text-white">Chicago Location</p></h3>
+                        <p class="m-0 text-center text-white">#1234 Plant Street</p>
+                        <p class="m-0 text-center text-white">MI, 20563</p>
+                        <p class="m-0 text-center text-white">Phone: (000) 030-0000</p>
+                        <p class="m-0 text-center text-white"><a href="#">Get Directions</a></p>
+                    </div>
+                </div>  
+                <div>
+                    <div class="row">
+                        <p class=" m-0 text-white">Copyright &copy; PlantWorld</p>
+                    </div>
+                </div>   
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
